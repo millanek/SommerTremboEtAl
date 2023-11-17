@@ -22,5 +22,5 @@
 
 ## Usage
 
-All the analyses are documented in R script `GWAS_furtherSNPinvestigation.R` and the input files in this folder. 
+All the analyses are documented in R script `GWAS_furtherSNPinvestigation.R`. 
 

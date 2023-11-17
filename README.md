@@ -4,8 +4,8 @@ Data and code for the manuscript "The genetics of niche-specific behavioral tend
 
 ## Analyses
 
-* [Testing for association](TestingForAssociation/README.md)<br>Testing for association between exploratory behavior and genetic variants
+* [Testing for association](TestingForAssociation/)<br>Testing for association between exploratory behavior and genetic variants
 
-* [Exploring HAVs](ExploringHAVs/README.md)<br>Selection and exploration of Highly Associated Variants (HAVs)
+* [Exploring HAVs](ExploringHAVs/)<br>Selection and exploration of Highly Associated Variants (HAVs)
 
-* [Association with Gene Expression](eWAS/README.md)<br>Testing for association between exploratory behavior and gene expression
+* [Association with Gene Expression](eWAS/)<br>Testing for association between exploratory behavior and gene expression
