@@ -451,4 +451,45 @@ doGOpermutations <- function() {
 	write.table(cbind(permutationResBP[,3], sigProportionsBP),"permutationResBP_means.txt",quote=F,sep="\t",row.names=F,col.names=F)
 }
 
+prepareExpressionData <- function (expr, y) {
+	matchingExpression <- match(y$species_abb,colnames(expr))[-which(is.na(match(y$species_abb,colnames(expression))))]
+	exprSpecies <- expr[,matchingExpression]
+	exprSpeciesOrdered <- exprSpecies[,order(names(exprSpecies))]
+	exprSpeciesOrderedLog2 <- log2(exprSpeciesOrdered+1)
+	numZeros <- apply(exprSpeciesOrderedLog2, 1, function(x) length(which(x == 0)))
+	toExcludeIndex <- which(numZeros > 3)
+	exprSpeciesOrderedLog2 <- exprSpeciesOrderedLog2[-toExcludeIndex, ]
+	return(exprSpeciesOrderedLog2)
+}
+
+doExpressionAssociation <- function(expr, pheno, tree) {
+	eWASvectorLM <- apply(expr, 1, function(x) lm(pheno$median_exploration ~ x))
+	ps_eWAS_LM <- sapply(eWASvectorLM, lmp); 
+	foldChange <- sapply(eWASvectorLM,function(x) x$coefficients[2])
+
+	## Second, using the PGLS approach to account for phylogenetic relationships among the species
+	tanTreeExp <- drop.tip(tree, tree$tip.label[! tree$tip.label %in% pheno$species_abb]);
+	pgls_eWASvector <- apply(expr, 1, doPGSLexpression, ourPheno=pheno, ourTree=tanTreeExp)
+	
+	res <- list(ps_eWAS_LM, foldChange, pgls_eWASvector)
+	names(res) <- c("p_GLM", "foldChange", "p_pGLS")
+	
+	return(res)
+}
+
+makeExpressionSummaryTable <- function(GWASexpr, nonGWASexpr, tissue) {
+	summmary <- as.data.frame(cbind(GWASexpr,rep("Y",length(GWASexpr)),rep(tissue,length(GWASexpr))))
+	colnames(summmary) <- c("expression","HAVs","tissue")
+	summmary_nonGWAS <- as.data.frame(cbind(nonGWASexpr,rep("N",length(nonGWASexpr)),rep(tissue,length(nonGWASexpr))))
+	colnames(summmary_nonGWAS) <- c("expression","HAVs","tissue")
+	summmary <- rbind(summmary, summmary_nonGWAS)
+	return(summmary)
+}
+
+makeExpressionTableMeanMedianNumber <- function(GWASexpr, nonGWASexpr, tissue) {
+	MMN <- cbind(mean(GWASexpr),median(GWASexpr),length(GWASexpr),quantile(GWASexpr, 1/4),quantile(GWASexpr, 3/4), sd(GWASexpr),"HAVs", tissue)
+	MMN <- rbind(MMN, cbind(mean(nonGWASexpr),median(nonGWASexpr),length(nonGWASexpr),quantile(nonGWASexpr, 1/4),quantile(nonGWASexpr, 3/4), sd(nonGWASexpr),"other", tissue))
+	return(MMN)
+
+}
 

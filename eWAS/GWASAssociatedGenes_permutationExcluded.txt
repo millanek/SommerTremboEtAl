@@ -1,0 +1,249 @@
+entrezgene_id	description	external_gene_name	chromosome_name	start_position	end_position
+100690021	bone morphogenetic protein receptor type 1B [Source:NCBI gene;Acc:100690021]	pdlim5a	LG12	20434493	20564439
+100691266	EPH receptor A6 [Source:NCBI gene;Acc:100691266]	EPHA6	LG16	11506447	11678240
+100692323	KIT proto-oncogene, receptor tyrosine kinase [Source:NCBI gene;Acc:100692323]	kita	LG23	37623105	37644218
+100692594	platelet derived growth factor receptor alpha [Source:NCBI gene;Acc:100692594]	pdgfra	LG23	37585191	37601860
+100692708	neurotrophic receptor tyrosine kinase 2 [Source:NCBI gene;Acc:100692708]	ntrk2a	LG12	20832394	20947157
+100695709	epidermal growth factor receptor [Source:NCBI gene;Acc:100695709]	egfra	LG18	19884642	20077518
+100696145	ephrin type-B receptor 1-B [Source:NCBI gene;Acc:100696145]	ephb1	LG18	14793925	14945414
+100698004	neurotrophic receptor tyrosine kinase 3 [Source:NCBI gene;Acc:100698004]	ntrk3b	LG1	33526585	33731922
+100698484	bone morphogenetic protein receptor type 1B [Source:NCBI gene;Acc:100690021]	pdlim5a	LG12	20434493	20564439
+100699123	neuropilin-1a [Source:NCBI gene;Acc:100699123]	NRP1	LG18	28451708	28545269
+100701099	EPH receptor A10 [Source:NCBI gene;Acc:100701099]		LG22	14356171	14512264
+100703725	NT-3 growth factor receptor [Source:NCBI gene;Acc:100703725]	ntrk3a	LG7	40046206	40122487
+100710577	ALK receptor tyrosine kinase [Source:NCBI gene;Acc:100710577]	alk	LG19	24161911	24567389
+100711033	fms related tyrosine kinase 4 [Source:NCBI gene;Acc:100711033]	flt4	LG2	28296369	28346180
+100690922	Rho GTPase activating protein 26 [Source:NCBI gene;Acc:100690922]	ARHGAP26	LG10	20173027	20256953
+100693522	RAS protein activator like 1 [Source:NCBI gene;Acc:100693522]	RASAL1	LG12	11735656	11750266
+100696216	TSC complex subunit 2 [Source:NCBI gene;Acc:100696216]	tsc2	LG6	31156659	31186448
+100696391	small G protein signaling modulator 1 [Source:NCBI gene;Acc:100696391]	sgsm1b	LG7	22045840	22059069
+100696997	ArfGAP with RhoGAP domain, ankyrin repeat and PH domain 2 [Source:NCBI gene;Acc:100696997]		LG3	18201029	18354737
+100698777	ArfGAP with SH3 domain, ankyrin repeat and PH domain 2 [Source:NCBI gene;Acc:100698777]	asap2a	LG19	12599633	12659208
+100706384	rho GTPase-activating protein 42 [Source:NCBI gene;Acc:100706384]		LG10	13789038	13807644
+100707120	chimerin 2 [Source:NCBI gene;Acc:100707120]	chn2	LG11	18446487	18466442
+100708218	StAR related lipid transfer domain containing 13 [Source:NCBI gene;Acc:100708218]	STARD13	LG10	16085924	16136453
+100708789	ecotropic viral integration site 5 [Source:NCBI gene;Acc:100708789]	evi5b	LG23	31249670	31293518
+100708930	arf-GAP with GTPase, ANK repeat and PH domain-containing protein 1 [Source:NCBI gene;Acc:100708930]	agap1	LG23	24689205	24853165
+100709511	signal-induced proliferation-associated 1-like protein 1 [Source:NCBI gene;Acc:100709511]	sipa1l1	LG15	15788557	15875376
+100710841	breakpoint cluster region protein [Source:NCBI gene;Acc:100710841]	bcr	LG7	24791666	24880564
+100711250	rho GTPase-activating protein 21 [Source:NCBI gene;Acc:100711250]	arhgap21b	LG18	16526186	16560890
+100690378	unconventional myosin-Ig [Source:NCBI gene;Acc:100690378]	myo1g	LG22	13230155	13292199
+100698173	centromere protein E [Source:NCBI gene;Acc:100698173]		LG15	28831216	28859254
+100701943	kinesin family member 26A [Source:NCBI gene;Acc:100701943]	kif26ab	LG19	11160865	11223124
+100703634	cingulin [Source:NCBI gene;Acc:100703634]	tuft1	LG11	20745936	20776487
+100704506	kinesin family member 7 [Source:NCBI gene;Acc:100704506]	kif7	LG1	22955610	22967957
+100704958	kinesin family member 6 [Source:NCBI gene;Acc:100704958]	kif6	LG19	22765326	22843398
+100705764	myosin-9 [Source:NCBI gene;Acc:100705764]	myh9a	LG6	26989765	27011942
+100706139	kinesin-1 heavy chain [Source:NCBI gene;Acc:100706139]	KIF5B	LG9	29967605	29984573
+100707073	myosin heavy chain 9 [Source:NCBI gene;Acc:100707073]	myh9b	LG4	8156723	8175867
+100711729	myosin IE [Source:NCBI gene;Acc:100711729]	myo1ea	LG1	21905219	21955232
+100711955	kinesin-like protein KIFC3 [Source:NCBI gene;Acc:100711955]	si:ch211-257p13.3	LG11	18935778	18943405
+100712135	myosin-7 [Source:NCBI gene;Acc:100712135]		LG18	2610691	2621875
+100534531	RAD51 recombinase [Source:NCBI gene;Acc:100534531]	rad51	LG15	28818319	28826375
+100690671	Janus kinase 1 [Source:NCBI gene;Acc:100690671]	jak1	LG17	34068134	34098077
+100690934	diacylglycerol kinase beta [Source:NCBI gene;Acc:100690934]	dgkb	LG11	32594135	32675900
+100691027	multidrug resistance-associated protein 1 [Source:NCBI gene;Acc:100691027]	abcc6a	LG6	33899431	33924329
+100691392	mitogen-activated protein kinase kinase kinase 12 [Source:NCBI gene;Acc:100691392]		LG5	5685446	5698995
+100691716	receptor like tyrosine kinase [Source:NCBI gene;Acc:100691716]	ryk	LG23	32539321	32591744
+100691726	serine/threonine-protein kinase 24 [Source:NCBI gene;Acc:100691726]	stk24a	LG16	17237367	17250158
+100693902	protein kinase C eta [Source:NCBI gene;Acc:100693902]	prkcha	LG19	11934315	11962992
+100694444	ribosomal protein S6 kinase beta-2 [Source:NCBI gene;Acc:100694444]	RPS6KB2	LG6	39596429	39608167
+100695401	microtubule affinity regulating kinase 3 [Source:NCBI gene;Acc:100695401]	mark3a	LG19	6462702	6508729
+100695739	purinergic receptor P2X 7 [Source:NCBI gene;Acc:100695739]	p2rx7	LG12	33081831	33095742
+100696183	serine/threonine-protein kinase PAK 6 [Source:NCBI gene;Acc:100696183]	pak6b	LG15	25808776	25822682
+100696207	serine/threonine-protein kinase BRSK2 [Source:NCBI gene;Acc:100696207]		LG1	2598847	2749824
+100696260	deoxythymidylate kinase [Source:NCBI gene;Acc:100696260]	dtymk	LG23	32325534	32329657
+100696321	3-phosphoinositide dependent protein kinase 1 [Source:NCBI gene;Acc:100696321]	pdpk1b	LG8	19348034	19356207
+100696627	plasma membrane calcium-transporting ATPase 1 [Source:NCBI gene;Acc:100696627]	atp2b4	LG5	12214128	12332167
+100697039	myosin phosphatase Rho interacting protein [Source:NCBI gene;Acc:100697039]	MPRIP	LG8	18871431	19098023
+100697345	dual specificity mitogen-activated protein kinase kinase 6 [Source:NCBI gene;Acc:100697345]	map2k6	LG8	3720455	3757354
+100697786	G protein-coupled receptor kinase 1 [Source:NCBI gene;Acc:100697786]	grk1a	LG1	16436451	16446305
+100697880	cyclin-dependent kinase 17 [Source:NCBI gene;Acc:100697880]		LG20	17434943	17467364
+100698165	polo like kinase 4 [Source:NCBI gene;Acc:100698165]	plk4	LG19	11571857	11577965
+100698428	inositol-tetrakisphosphate 1-kinase [Source:NCBI gene;Acc:100698428]	itpk1	LG19	11539847	11567931
+100698523	protein kinase C alpha type [Source:NCBI gene;Acc:100698523]	prkcab	LG4	18852287	18971262
+100698764	ATPase cation transporting 13A2 [Source:NCBI gene;Acc:100698764]	atp13a2	LG20	28724567	28740563
+100698826	serum/glucocorticoid regulated kinase 1 [Source:NCBI gene;Acc:100698826]	SGK1	LG15	8078637	8113084
+100699484	mitogen-activated protein kinase 14A [Source:NCBI gene;Acc:100699484]	mapk14a	LG20	20777940	20792291
+100700798	serine/threonine-protein kinase OSR1 [Source:NCBI gene;Acc:100700798]	oxsr1b	LG9	18030788	18069652
+100701141	phenylalanyl-tRNA synthetase subunit beta [Source:NCBI gene;Acc:100701141]	farsb	LG14	6873785	6895815
+100701169	mitogen-activated protein kinase kinase kinase 4 [Source:NCBI gene;Acc:100701169]	map3k4	LG13	20788773	20809873
+100701191	pantothenate kinase 4 (inactive) [Source:NCBI gene;Acc:100701191]	pank4	LG5	11750538	11764564
+100701417	rho-associated protein kinase 2 [Source:NCBI gene;Acc:100701417]	rock2b	LG15	13128298	13165523
+100702529	unc-51 like autophagy activating kinase 1 [Source:NCBI gene;Acc:100702529]	ulk1b	LG7	23853459	23874576
+100703888	mitogen-activated protein kinase kinase kinase 5 [Source:NCBI gene;Acc:100703888]	map3k5	LG15	17211072	17295938
+100704088	serine/threonine-protein kinase DCLK1 [Source:NCBI gene;Acc:100704088]	dclk1b	LG14	30809912	30826842
+100705510	acyl-CoA binding domain containing 3 [Source:NCBI gene;Acc:100705510]	acbd3	LG15	10119874	10128364
+100706434	adenylate cyclase type 1 [Source:NCBI gene;Acc:100706434]	adcy1b	LG18	17579900	17615400
+100707006	trio Rho guanine nucleotide exchange factor [Source:NCBI gene;Acc:100707006]	trioa	LG22	29461576	29502824
+100707864	phosphatidylinositol 4-phosphate 5-kinase type-1 beta [Source:NCBI gene;Acc:100707864]	pip5k1bb	LG12	16975500	16996385
+100707946	mitogen-activated protein kinase kinase kinase 11 [Source:NCBI gene;Acc:100707946]	MAP3K11	LG3	4894754	4937142
+100707975	VRK serine/threonine kinase 3 [Source:NCBI gene;Acc:100707975]	vrk3	LG1	22531885	22545158
+100708901	adenylate kinase 5 [Source:NCBI gene;Acc:100708901]	ak5	LG18	25391317	25505032
+100709836	glutamyl-prolyl-tRNA synthetase 1 [Source:NCBI gene;Acc:100709836]	eprs1	LG1	34047466	34067639
+100710057	pantothenate kinase 3 [Source:NCBI gene;Acc:100710057]	pank2	LG19	8262483	8266901
+100710876	thyroid hormone receptor interactor 13 [Source:NCBI gene;Acc:100710876]	trip13	LG11	18885144	18893043
+100711594	pyruvate carboxylase [Source:NCBI gene;Acc:100711594]	pcxb	LG3	10552081	10833460
+100711874	synapsin II [Source:NCBI gene;Acc:100711874]	syn2b	LG5	18938245	19023184
+100712059	chromodomain helicase DNA binding protein 9 [Source:NCBI gene;Acc:100712059]	chd9	LG1	30896933	30961583
+100712245	minichromosome maintenance 8 homologous recombination repair factor [Source:NCBI gene;Acc:100712245]	mcm8	LG13	5988017	5996904
+100693140	semaphorin-4B [Source:NCBI gene;Acc:100693140]	sema4ba	LG7	53175624	53261727
+100697537	semaphorin 6A [Source:NCBI gene;Acc:100697537]	sema6a	LG12	24608897	24667236
+100701801	semaphorin 3A [Source:NCBI gene;Acc:100701801]	sema3ab	LG7	54967542	54990152
+100704625	semaphorin-6D [Source:NCBI gene;Acc:100704625]	sema6e	LG11	31484102	31567868
+100706333	semaphorin-3D [Source:NCBI gene;Acc:100706333]	si:dkey-49n23.1	LG5	3363291	3427773
+100709055	semaphorin 5A [Source:NCBI gene;Acc:100709055]	sema5a	LG9	21001000	21139934
+100690924	FERM, ARHGEF and pleckstrin domain-containing protein 1 [Source:NCBI gene;Acc:100690924]	FARP1	LG16	17337791	17392436
+100691947	radixin [Source:NCBI gene;Acc:100691947]	RDX	LG16	27175132	27212678
+100693214	spectrin repeat containing nuclear envelope family member 3 [Source:NCBI gene;Acc:100693214]	syne3	LG19	84481	125794
+100695939	fascin-2 [Source:NCBI gene;Acc:100695939]	fscn2a	LG4	21308653	21315525
+100696273	actinin alpha 3 [Source:NCBI gene;Acc:100696273]	actn3b	LG3	23892943	23930435
+100696514	ena/VASP-like protein [Source:NCBI gene;Acc:100696514]	evlb	LG15	4592300	4641706
+100700825	neurabin-2 [Source:NCBI gene;Acc:100700825]	ppp1r9ba	LG4	6793379	6817988
+100702205	coronin 2A [Source:NCBI gene;Acc:100702205]	coro2a	LG6	17369635	17382450
+100705311	dynein regulatory complex subunit 4 [Source:NCBI gene;Acc:100705311]	got2b	LG1	22732341	22777457
+100708519	parvin beta [Source:NCBI gene;Acc:100708519]	parvb	LG7	46906709	46923755
+100710862	dishevelled associated activator of morphogenesis 1 [Source:NCBI gene;Acc:100710862]	daam1b	LG15	9506233	9549537
+100711727	advillin [Source:NCBI gene;Acc:100711727]	avil	LG5	24531545	24541143
+100712063	phosphatase and actin regulator 2 [Source:NCBI gene;Acc:100712063]	phactr2	LG13	12087616	12132568
+100712362	parvin gamma [Source:NCBI gene;Acc:100712362]	parvg	LG7	46929632	46938696
+100694244	transmembrane and TPR repeat-containing protein 2 [Source:NCBI gene;Acc:100694244]	tmtc2b	LG7	61646063	61731032
+100695990	GDP-Man:Man(3)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase [Source:NCBI gene;Acc:100695990]	ALG11	LG23	11828240	11832861
+100707010	transmembrane and TPR repeat-containing protein 2 [Source:NCBI gene;Acc:100707010]	tmtc2a	LG17	12158234	12221433
+100696524	engulfment and cell motility protein 1 [Source:NCBI gene;Acc:100696524]	ELMO1	LG22	22610663	22672617
+100710655	ADAM metallopeptidase domain 10 [Source:NCBI gene;Acc:100710655]	adam10a	LG1	22049848	22078266
+100691117	egl nine homolog 2 [Source:NCBI gene;Acc:100691117]	egln2	LG14	21897045	21909398
+100698070	fatty acid-binding protein 10-A, liver basic [Source:NCBI gene;Acc:100698070]	fabp10a	LG11	27505004	27506115
+100700844	cellular retinoic acid-binding protein 1 [Source:NCBI gene;Acc:100700844]	crabp1b	LG1	10687975	10694891
+100704480	neurocan core protein [Source:NCBI gene;Acc:100704480]		LG18	13387856	13422358
+100712050	brevican core protein [Source:NCBI gene;Acc:100712050]	bcan	LG11	29957942	29985619
+100691565	lysine-specific demethylase 2B [Source:NCBI gene;Acc:100691565]	kdm2bb	LG7	22396444	22421085
+100693453	arachidonate 5-lipoxygenase [Source:NCBI gene;Acc:100693453]	alox5a	LG13	17654799	17665845
+100694376	retinal Mueller cells isomerohydrolase [Source:NCBI gene;Acc:100694376]	rpe65b	LG17	29887193	29897962
+100706847	3-hydroxyanthranilate 3,4-dioxygenase [Source:NCBI gene;Acc:100706847]	haao	LG13	28601730	28609076
+100707211	lysine-specific demethylase 4C [Source:NCBI gene;Acc:100707211]	kdm4c	LG6	23727006	23757141
+100709971	aspartate beta-hydroxylase domain containing 2 [Source:NCBI gene;Acc:100709971]	asphd2	LG12	8484418	8487034
+100534513	gamma-aminobutyric acid receptor subunit rho-1 [Source:NCBI gene;Acc:100534513]	GABRR1	LG19	13595567	13609556
+100690133	glutamate receptor 4 [Source:NCBI gene;Acc:100690133]	gria4b	LG10	25876172	26029076
+100691234	acetylcholine receptor subunit alpha [Source:NCBI gene;Acc:100691234]	chrna1	LG13	6845990	6867010
+100694268	5-hydroxytryptamine receptor 3B [Source:NCBI gene;Acc:100694268]	htr3b	LG10	24604790	24614619
+100696181	glutamate ionotropic receptor delta type subunit 2 [Source:NCBI gene;Acc:100696181]	grid2	LG12	21549107	22029741
+100698622	glutamate receptor ionotropic, NMDA 2A [Source:NCBI gene;Acc:100698622]	grin2ab	LG6	12690152	12800108
+100703311	glutamate receptor ionotropic, delta-1 [Source:NCBI gene;Acc:100703311]	grid1a	LG13	12295123	12553027
+100705532	gamma-aminobutyric acid type A receptor delta subunit [Source:NCBI gene;Acc:100705532]	gabrd	LG20	26931048	26953035
+100708615	neuronal acetylcholine receptor subunit non-alpha-2 [Source:NCBI gene;Acc:100708615]	chrnb3b	LG2	22242743	22249342
+100710701	gamma-aminobutyric acid type A receptor beta2 subunit [Source:NCBI gene;Acc:100710701]	gabrb2a	LG2	26537565	26570097
+100700960	myocyte-specific enhancer factor 2A [Source:NCBI gene;Acc:100700960]		LG1	34232735	34269408
+100703380	cAMP responsive element binding protein 3 like 1 [Source:NCBI gene;Acc:100703380]	creb3l1	LG23	12808591	12847555
+100704788	GLI family zinc finger 2 [Source:NCBI gene;Acc:100704788]		LG16	9717919	9781111
+100709465	zinc finger protein GLI2 [Source:NCBI gene;Acc:100709465]	gli2b	LG23	24423474	24516583
+100710687	GLI family zinc finger 1 [Source:NCBI gene;Acc:100710687]	gli1	LG5	6037231	6091364
+100708222	galactosylgalactosylxylosylprotein 3-beta-glucuronosyltransferase 1 [Source:NCBI gene;Acc:100708222]	B3GAT1	LG10	2581642	2598649
+100709321	galactosylgalactosylxylosylprotein 3-beta-glucuronosyltransferase 1 [Source:NCBI gene;Acc:100709321]	b3gat1a	LG14	16159614	16179385
+100711477	beta-1,4-glucuronyltransferase 1 [Source:NCBI gene;Acc:100711477]	b4gat1	LG3	23692588	23695145
+100694218	amyloid-beta A4 protein [Source:NCBI gene;Acc:100694218]	APP	LG23	11157415	11190813
+100696584	TSR3 ribosome maturation factor [Source:NCBI gene;Acc:100696584]	tsr3	LG8	19342177	19347493
+100690273	ubiquitin carboxyl-terminal hydrolase 43 [Source:NCBI gene;Acc:100690273]	usp43b	LG4	8709528	8795974
+100693992	ubiquitin specific peptidase 28 [Source:NCBI gene;Acc:100693992]	usp28	LG10	24579846	24605152
+100697700	ubiquitin specific peptidase 38 [Source:NCBI gene;Acc:100697700]	usp38	LG6	16639300	16647365
+100702680	CYLD lysine 63 deubiquitinase [Source:NCBI gene;Acc:100702680]	cylda	LG1	31457176	31476170
+100702786	ubiquitin specific peptidase 3 [Source:NCBI gene;Acc:100702786]	usp3	LG7	52041002	52053137
+100710381	ubiquitin specific peptidase 24 [Source:NCBI gene;Acc:100710381]	USP24	LG23	38217362	38247229
+100712261	pyroglutamyl-peptidase 1 [Source:NCBI gene;Acc:100712261]	pgpep1l	LG7	54163085	54197759
+102076178	ubiquitin specific peptidase 53 [Source:NCBI gene;Acc:102076178]	USP53	LG3	12504679	12527742
+100534441	Oreochromis niloticus muscarinic receptor 2 subtype (LOC100534441), mRNA. [Source:RefSeq mRNA;Acc:NM_001279657]	chrm2a	LG17	15340816	15342324
+100697528	cortactin binding protein 2 [Source:NCBI gene;Acc:100697528]	cttnbp2	LG7	40985880	41069082
+100699242	gap junction delta-2 protein [Source:NCBI gene;Acc:100699242]	gjd1a	LG10	10597670	10612310
+100703625	potassium voltage-gated channel subfamily B member 1 [Source:NCBI gene;Acc:100703625]	kcnb1	LG5	16698242	16729806
+100710155	homer scaffold protein 3 [Source:NCBI gene;Acc:100710155]	homer3b	LG15	32058194	32103429
+100693178	integrin subunit alpha 7 [Source:NCBI gene;Acc:100693178]		LG5	5419070	5457172
+100693769	Down syndrome cell adhesion molecule [Source:NCBI gene;Acc:100693769]	dscamb	LG14	14559936	14684309
+100696518	potassium voltage-gated channel subfamily G member 3 [Source:NCBI gene;Acc:100696518]	kcng3	LG8	10593976	10597387
+100697706	integrin subunit alpha 1 [Source:NCBI gene;Acc:100697706]	itga1	LG7	17071505	17127921
+100704187	solute carrier family 12 member 5 [Source:NCBI gene;Acc:100704187]	slc12a5a	LG5	8570622	8740290
+100704407	integrin subunit alpha 9 [Source:NCBI gene;Acc:100704407]	itga9	LG13	21711915	21758551
+100705089	transmembrane channel like 6 [Source:NCBI gene;Acc:100705089]	TMC6	LG6	32728589	32748249
+100705353	transmembrane channel like 8 [Source:NCBI gene;Acc:100705353]	tmc8	LG6	32750462	32761866
+100710764	glypican-5 [Source:NCBI gene;Acc:100710764]	gpc5a	LG1	16659327	16802225
+100712209	Down syndrome cell adhesion molecule homolog [Source:NCBI gene;Acc:100712209]	dscama	LG10	2822576	2921324
+100712338	solute carrier family 52 member 3 [Source:NCBI gene;Acc:100712338]	slc52a3	LG20	9976560	9983480
+102075906	glypican-3 [Source:NCBI gene;Acc:102075906]	gpc3	LG2	32109501	32313879
+102077503	glypican-5 [Source:NCBI gene;Acc:102077503]		LG18	15035483	15130914
+100689731	liprin-alpha-2 [Source:NCBI gene;Acc:100689731]	ppfia4	LG5	25575533	25639699
+100695586	synaptotagmin 1 [Source:NCBI gene;Acc:100695586]	syt1a	LG17	16187533	16294060
+100697157	synaptojanin 1 [Source:NCBI gene;Acc:100697157]	synj1	LG10	15193929	15218618
+100710059	calcium dependent secretion activator [Source:NCBI gene;Acc:100710059]	cadpsb	LG5	16319256	16384444
+102075960	otoferlin [Source:NCBI gene;Acc:102075960]	otofa	LG15	12180730	12277186
+100702184	vacuolar protein sorting 36 homolog [Source:NCBI gene;Acc:100702184]	vps36	LG10	14709933	14717066
+100702367	SNF8 subunit of ESCRT-II [Source:NCBI gene;Acc:100702367]	snf8	LG8	5275127	5279145
+100702746	DENN domain containing 4C [Source:NCBI gene;Acc:100702746]	dennd4c	LG3	11177383	11216225
+100698758	T-lymphoma invasion and metastasis-inducing protein 1 [Source:NCBI gene;Acc:100698758]	tiam1a	LG10	15058334	15109234
+100699296	TIAM Rac1 associated GEF 2 [Source:NCBI gene;Acc:100699296]	tiam2a	LG19	28192285	28233916
+100693124	docking protein 7 [Source:NCBI gene;Acc:100693124]	DOK7	LG3	15422655	15464925
+100699261	abl interactor 1 [Source:NCBI gene;Acc:100699261]	abi1a	LG9	12510851	12562001
+100690028	neuron navigator 1 [Source:NCBI gene;Acc:100690028]	NAV1	LG20	18568238	18647697
+100690212	protein NDRG1 [Source:NCBI gene;Acc:100690212]	ndrg1b	LG11	8045583	8049905
+100690810	family with sequence similarity 53 member B [Source:NCBI gene;Acc:100690810]	fam53b	LG8	11496133	11502884
+100692395	tenascin R [Source:NCBI gene;Acc:100692395]	tnr	LG18	15657591	15787515
+100692641	grainyhead like transcription factor 3 [Source:NCBI gene;Acc:100692641]	grhl3	LG19	14260543	14269209
+100693419	sphingosine 1-phosphate receptor 2 [Source:NCBI gene;Acc:100693419]	s1pr2	LG4	24066069	24067190
+100694156	cysteine and glycine-rich protein 2 [Source:NCBI gene;Acc:100694156]	csrp1a	LG20	18552160	18559140
+100694377	AP-1 complex subunit gamma-1 [Source:NCBI gene;Acc:100694377]	ap1g2	LG18	6935038	6949331
+100695753	granulin precursor [Source:NCBI gene;Acc:100695753]	grnb	LG8	4430171	4444790
+100696546	autophagy related 5 [Source:NCBI gene;Acc:100696546]	atg5	LG11	30728602	30772847
+100697605	euchromatic histone lysine methyltransferase 2 [Source:NCBI gene;Acc:100697605]	ehmt2	LG22	15469823	15484573
+100699557	sulfatase 1 [Source:NCBI gene;Acc:100699557]	sulf1	LG9	19702216	19787876
+100699942	melanoma cell adhesion molecule [Source:NCBI gene;Acc:100699942]	mcamb	LG14	20243691	20286690
+100700013	angiopoietin 1 [Source:NCBI gene;Acc:100700013]	angpt1	LG22	14963729	15021263
+100700742	leucine-rich repeat and immunoglobulin-like domain-containing nogo receptor-interacting protein 1 [Source:NCBI gene;Acc:100700742]	lingo1a	LG7	44883626	44885473
+100701491	kirre like nephrin family adhesion molecule 2 [Source:NCBI gene;Acc:100701491]	kirrel3l	LG11	17688655	17720126
+100703740	pyrroline-5-carboxylate reductase 1, mitochondrial [Source:NCBI gene;Acc:100703740]	pycr1b	LG6	32653044	32662832
+100704528	glucosylceramidase beta 2 [Source:NCBI gene;Acc:100704528]	gba2	LG3	22402776	22419928
+100704746	adhesion G-protein coupled receptor G5 [Source:NCBI gene;Acc:100704746]	adgrg1	LG1	35639770	35660390
+100704785	protocadherin alpha-C2 [Source:NCBI gene;Acc:100704785]	pcdh2ac	LG2	23578428	23786356
+100706311	transmembrane protein 132E [Source:NCBI gene;Acc:100706311]	tmem132e	LG10	27194224	27354434
+100706900	bone morphogenetic protein 2 [Source:NCBI gene;Acc:100706900]	bmp2b	LG15	4165362	4171715
+100707130	phosphomannomutase 2 [Source:NCBI gene;Acc:100707130]	pmm2	LG6	40943528	40951251
+100708842	neuroplastin [Source:NCBI gene;Acc:100708842]	nptnb	LG1	29774451	29799376
+100709153	contactin-1a [Source:NCBI gene;Acc:100709153]	CNTN1	LG7	47899452	47959450
+100710579	protein jagged-2 [Source:NCBI gene;Acc:100710579]	jag2b	LG15	16761003	16804011
+100711078	MAM domain-containing glycosylphosphatidylinositol anchor protein 2 [Source:NCBI gene;Acc:100711078]	mdga2a	LG19	936475	1128626
+100711374	nodal homolog 2-A-like [Source:NCBI gene;Acc:100711374]	ndr1	LG7	26324477	26326090
+100712454	grainyhead-like protein 2 homolog [Source:NCBI gene;Acc:100712454]	grhl2b	LG22	19834755	19853189
+102080562	pro-neuregulin-3, membrane-bound isoform [Source:NCBI gene;Acc:102080562]		LG13	3921232	4253799
+109194156	fibrillarin [Source:NCBI gene;Acc:109194156]	fbl	LG11	1786247	1795617
+100694209	synaptotagmin-9 [Source:NCBI gene;Acc:100694209]	syt9b	LG7	5902071	5949692
+100711869	double C2-like domain-containing protein beta [Source:NCBI gene;Acc:100711869]	doc2b	LG10	26913735	27083912
+102080697	E3 ubiquitin-protein ligase SH3RF1 [Source:NCBI gene;Acc:102080697]		LG2	26877986	26896404
+100698029	arginyltransferase 1 [Source:NCBI gene;Acc:100698029]	ATE1	LG13	24582363	24633780
+100700215	synoviolin 1 [Source:NCBI gene;Acc:100700215]	syvn1	LG2	32936893	32946372
+100701559	proteasome 20S subunit beta 3 [Source:NCBI gene;Acc:100701559]	psmb3	LG6	38386470	38390897
+100705320	ubiquitination factor E4B [Source:NCBI gene;Acc:100705320]	ube4b	LG20	22093245	22110349
+100691543	secreted protein acidic and cysteine rich [Source:NCBI gene;Acc:100691543]	sparc	LG2	6181708	6196208
+100692865	Fas associated factor 1 [Source:NCBI gene;Acc:100692865]	faf1	LG23	41078556	41137928
+100694368	BCL9 transcription coactivator [Source:NCBI gene;Acc:100694368]	bcl9	LG16	18753818	18778651
+100696437	protein tyrosine phosphatase non-receptor type 21 [Source:NCBI gene;Acc:100696437]	ptpn21	LG19	15965669	15980994
+100700657	forkhead box O3 [Source:NCBI gene;Acc:100700657]	foxo3b	LG15	12038847	12077033
+100702494	lin-28 homolog B [Source:NCBI gene;Acc:100702494]	lin28b	LG15	12832949	12849484
+100706757	BMP binding endothelial regulator [Source:NCBI gene;Acc:100706757]	bmper	LG11	30475628	30507031
+100711334	ribosomal protein L35 [Source:NCBI gene;Acc:100711334]	rpl35	LG12	2225509	2227994
+100700491	dachshund homolog 1 [Source:NCBI gene;Acc:100700491]	DACH1	LG16	22909967	23024989
+100690499	cytohesin-3 [Source:NCBI gene;Acc:100690499]	CYTH3	LG4	18996848	19040333
+100696614	RasGEF domain family member 1B [Source:NCBI gene;Acc:100696614]	rasgef1ba	LG12	34369400	34480227
+100703103	RAB39B, member RAS oncogene family [Source:NCBI gene;Acc:100703103]	RAB39B	LG3	30316163	30324705
+100704372	rho-related GTP-binding protein RhoF [Source:NCBI gene;Acc:100704372]	rhof	LG7	22376347	22378930
+100707935	rho-related BTB domain-containing protein 2 [Source:NCBI gene;Acc:100707935]	rhobtb4	LG12	15700657	15735162
+100708313	cytohesin 3 [Source:NCBI gene;Acc:100708313]	CYTH3	LG8	20546685	20576603
+100696021	transient receptor potential cation channel subfamily V member 5 [Source:NCBI gene;Acc:100696021]	trpv6	LG11	22860330	22869929
+100698262	voltage-dependent calcium channel gamma-5 subunit [Source:NCBI gene;Acc:100698262]	cacng5b	LG4	18973003	18993157
+100707890	solute carrier family 8 member A3 [Source:NCBI gene;Acc:100707890]	slc8a3	LG19	22231722	22349261
+100708540	sodium/calcium exchanger 2 [Source:NCBI gene;Acc:100708540]	slc8a2b	LG14	36142104	36302063
+100711860	solute carrier family 8 member B1 [Source:NCBI gene;Acc:100711860]	slc8b1	LG12	17713546	17722322
+100712128	two pore segment channel 1 [Source:NCBI gene;Acc:100712128]	tpcn1	LG12	17700961	17713246
+102079371	calcium voltage-gated channel auxiliary subunit alpha2delta 2 [Source:NCBI gene;Acc:102079371]	cacna2d2a	LG5	17399141	17564830
+100691929	ectopic P-granules autophagy protein 5 homolog [Source:NCBI gene;Acc:100691929]	epg5	LG12	17502433	17525806
+100708872	beclin 1 [Source:NCBI gene;Acc:100708872]	becn1	LG8	14139069	14144180
+100691637	sodium/hydrogen exchanger 3 [Source:NCBI gene;Acc:100708625]	SLC9A3	LG22	12705959	12837076
+100705611	sodium/hydrogen exchanger 1 [Source:NCBI gene;Acc:100705611]	SLC9A1	LG11	27860385	27887453
+100707165	acid sensing ion channel subunit 2 [Source:NCBI gene;Acc:100707165]	ASIC2	LG4	27977039	28101426
+109204746	toll-like receptor 1 [Source:NCBI gene;Acc:109204746]	tlr1	LG2	24346314	24348767
