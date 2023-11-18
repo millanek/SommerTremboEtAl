@@ -8,15 +8,12 @@
 ########################################################################
 
 # This is for the pgls approach
-library(caper)
-
-library("biomaRt"); ensembl=useMart("ensembl",dataset="oniloticus_gene_ensembl")
-library("topGO"); library("GenomicRanges"); #library("goseq")
-library("zoo")
+library("caper")
+library("topGO"); 
 # and our functions that are needed below:
-source("~/Sanger_work/R_scripts/GWAS_functions.R")
+source("../ExploringHAVs/GWAS_functions.R")
 
-setwd("~/CarolinGWAS/SommerTremboEtAl/eWAS/")
+setwd("~/CarolinGWAS/SommerTremboEtAl/eWAS/") 
 
 ################################################################################
 ##  load data and get it into shape       ######################################
