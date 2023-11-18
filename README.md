@@ -9,3 +9,5 @@ Data and code for the manuscript "The genetics of niche-specific behavioral tend
 * [Exploring HAVs](ExploringHAVs/)<br>Selection and exploration of Highly Associated Variants (HAVs)
 
 * [Association with Gene Expression](eWAS/)<br>Testing for association between exploratory behavior and gene expression
+
+* [Exploring cacng genes](cacngExploration/)<br>Looking at expression of cacng5b and other cacng genes 
