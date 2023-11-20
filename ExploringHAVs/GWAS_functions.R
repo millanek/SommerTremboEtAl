@@ -451,14 +451,16 @@ doGOpermutations <- function() {
 	write.table(cbind(permutationResBP[,3], sigProportionsBP),"permutationResBP_means.txt",quote=F,sep="\t",row.names=F,col.names=F)
 }
 
-prepareExpressionData <- function (expr, y) {
+prepareExpressionData <- function (expr, y, exclZeros = T, maxMissing = 3) {
 	matchingExpression <- match(y$species_abb,colnames(expr))[-which(is.na(match(y$species_abb,colnames(expression))))]
 	exprSpecies <- expr[,matchingExpression]
 	exprSpeciesOrdered <- exprSpecies[,order(names(exprSpecies))]
 	exprSpeciesOrderedLog2 <- log2(exprSpeciesOrdered+1)
 	numZeros <- apply(exprSpeciesOrderedLog2, 1, function(x) length(which(x == 0)))
-	toExcludeIndex <- which(numZeros > 3)
-	exprSpeciesOrderedLog2 <- exprSpeciesOrderedLog2[-toExcludeIndex, ]
+	if (exclZeros) {
+		toExcludeIndex <- which(numZeros > 3)
+		exprSpeciesOrderedLog2 <- exprSpeciesOrderedLog2[-toExcludeIndex, ]
+	}
 	return(exprSpeciesOrderedLog2)
 }
 
@@ -490,6 +492,25 @@ makeExpressionTableMeanMedianNumber <- function(GWASexpr, nonGWASexpr, tissue) {
 	MMN <- cbind(mean(GWASexpr),median(GWASexpr),length(GWASexpr),quantile(GWASexpr, 1/4),quantile(GWASexpr, 3/4), sd(GWASexpr),"HAVs", tissue)
 	MMN <- rbind(MMN, cbind(mean(nonGWASexpr),median(nonGWASexpr),length(nonGWASexpr),quantile(nonGWASexpr, 1/4),quantile(nonGWASexpr, 3/4), sd(nonGWASexpr),"other", tissue))
 	return(MMN)
-
 }
 
+getMeanExpressionWithSubgroups <- function(exp, group1, group2) {
+	meanExp <- apply(exp,1,mean,na.rm=T)
+	matchesGroup1 <- match(group1,colnames(exp))[-which(is.na(match(group1,colnames(exp))))]
+	matchesGroup2 <- match(group2,colnames(exp))[-which(is.na(match(group2,colnames(exp))))]
+	expGroup1 <- exp[, matchesGroup1]; 
+	expGroup2 <- exp[, matchesGroup2];
+	meanExpGroup1 <- apply(expGroup1,1,mean,na.rm=T)
+	meanExpGroup2 <- apply(expGroup2,1,mean,na.rm=T)
+	meansWithSubgroups <- list(meanExp, meanExpGroup1, meanExpGroup2)
+	names(meansWithSubgroups) <- c("mean", "meanGroup1", "meanGroup2")
+	return(meansWithSubgroups)
+}
+
+findCacngs <- function(cacng_genes, exp) {
+	cacng_gene_positions <- numeric(0)
+	for (i in 1:dim(cacng_genes)[1]) {
+		cacng_gene_positions <- c(cacng_gene_positions,which(rownames(expression) == cacng_genes$entrezID[i]))
+	} 
+	return(cacng_gene_positions)
+}

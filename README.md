@@ -1,6 +1,7 @@
 # SommerTremboEtAl
 
-Data and code for the manuscript "The genetics of niche-specific behavioral tendencies in an adaptive radiation of cichlid fishes"
+Data and code for:
+Sommer-Trembo C, Santos MA, Clark B, Werner M, Fages A, Matschiner M, Hornung S, Oliver Ch, Garcia C, Ronco F, Tschopp P, Malinsky M* & Salzburger W*. (2023) The genetics of niche-specific behavioral tendencies in an adaptive radiation of cichlid fishes. 
 
 ## Analyses
 

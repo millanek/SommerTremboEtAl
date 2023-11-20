@@ -1,117 +1,76 @@
+########################################################################
+### Script by Milan Malinsky and Carolin Sommer-Trembo
+### Last edit: 20th Nov 2023
+### Exploring the gene expression of cacng genes across tissues
 
+################################################################################
+##  load data and get it into shape       ######################################
+################################################################################
 
-############################################################
-######   PART 3 - looking specifically at cacng genes  
-############################################################
+setwd("~/CarolinGWAS/SommerTremboEtAl/cacngExploration/") 
 
 # Load expression data:
-expression <- read.table("CichlidX_TPM_GeneExpressionMatrix_BR.txt.gz")
-expressionLiver <- read.table("CichlidX_TPM_GeneExpressionMatrix_VE.txt.gz")
-expressionOvary <- read.table("CichlidX_TPM_GeneExpressionMatrix_OV.txt.gz")
-expressionTestis <- read.table("CichlidX_TPM_GeneExpressionMatrix_TE.txt.gz")
-expressionGills <- read.table("CichlidX_TPM_GeneExpressionMatrix_GI.txt.gz")
-expressionLPJ <- read.table("CichlidX_TPM_GeneExpressionMatrix_LP.txt.gz")
+expression <- read.table("../eWAS/CichlidX_TPM_GeneExpressionMatrix_BR.txt.gz")
+expressionLiver <- read.table("../eWAS/CichlidX_TPM_GeneExpressionMatrix_VE.txt.gz")
+expressionOvary <- read.table("../eWAS/CichlidX_TPM_GeneExpressionMatrix_OV.txt.gz")
+expressionTestis <- read.table("../eWAS/CichlidX_TPM_GeneExpressionMatrix_TE.txt.gz")
+expressionGills <- read.table("../eWAS/CichlidX_TPM_GeneExpressionMatrix_GI.txt.gz")
+expressionLPJ <- read.table("../eWAS/CichlidX_TPM_GeneExpressionMatrix_LP.txt.gz")
 
+# Preparing the expression data for further analyses 
+brainExpressionOrderedLog2 <- prepareExpressionData(expression, y, exclZeros = F)
+liverExpressionOrderedLog2 <- prepareExpressionData(expressionLiver, y, exclZeros = F)
+GillsExpressionOrderedLog2 <- prepareExpressionData(expressionGills, y, exclZeros = F)
+TestisExpressionOrderedLog2 <- prepareExpressionData(expressionTestis, y, exclZeros = F)
+OvaryExpressionOrderedLog2 <- prepareExpressionData(expressionOvary, y, exclZeros = F)
+LPJExpressionOrderedLog2 <- prepareExpressionData(expressionLPJ, y, exclZeros = F)
 
+# the behaviour measurement
+y <- read.table("../TestingForAssociation/exploratoryBehaviorMedians.txt",header=T)
+y2 <- y[-1,]; y3 <- y2[order(y2$species_abb),]
+hiSpecies <- y3$species_abb[which(y3$median_exploration > quantile(y3$median_exploration,0.50))]
+loSpecies <- y3$species_abb[which(y3$median_exploration <= quantile(y3$median_exploration,0.50))]
 
-matchingExpression <- match(y3$species_abb,colnames(expression))[-which(is.na(match(y3$species_abb,colnames(expression))))]
-matchingExpressionBrainHi <- match(hiSpecies,colnames(expression))[-which(is.na(match(hiSpecies,colnames(expression))))]
-matchingExpressionBrainLo <- match(loSpecies,colnames(expression))[-which(is.na(match(loSpecies,colnames(expression))))]
-brainExpression <- expression[,matchingExpression]
-expressionBrainHi <- expression[, matchingExpressionBrainHi]; expressionBrainLo <- expression[, matchingExpressionBrainLo]
+################################################################################
+##  look at cacng gene expression         ######################################
+################################################################################
 
+meanExpressionValsBrain <- getMeanExpressionWithSubgroups(brainExpressionOrderedLog2, hiSpecies, loSpecies)
+meanExpressionValsLiver <- getMeanExpressionWithSubgroups(liverExpressionOrderedLog2, hiSpecies, loSpecies)
+meanExpressionValsGills <- getMeanExpressionWithSubgroups(GillsExpressionOrderedLog2, hiSpecies, loSpecies)
+meanExpressionValsTestis <- getMeanExpressionWithSubgroups(TestisExpressionOrderedLog2, hiSpecies, loSpecies)
+meanExpressionValsOvary <- getMeanExpressionWithSubgroups(OvaryExpressionOrderedLog2, hiSpecies, loSpecies)
+meanExpressionValsLPJ <- getMeanExpressionWithSubgroups(LPJExpressionOrderedLog2, hiSpecies, loSpecies)
 
-tissues <- c("brain","liver","ovary","testis","gills","LPJs")
-cacng_gene_positions <- numeric(0)
-for (i in 1:dim(cacng_genes)[1]) {
-cacng_gene_positions <- c(cacng_gene_positions,which(rownames(expression) == cacng_genes$entrezID[i]))
-} 
+# separating species according to the cacng5b SNP
+SNP_species_info <- read.table("~/CarolinGWAS/pointOfBeauty_LG4_1472288.txt",header=TRUE)
+cacng5bHiSpecies <- SNP_species_info$taxa[which(SNP_species_info$gen_highest == -1)]
+cacng5bLoSpecies <- SNP_species_info$taxa[which(SNP_species_info$gen_highest == 1)]
+# this can be used as a switch to either use exploration mesurements or the gacng5b genotype for separation of species for the cacng barplots in part3
+hiSpecies <- cacng5bHiSpecies; loSpecies <- cacng5bLoSpecies
+
+# entrezIDs of cacng genes:
+cacng_genes <- read.table("cacngEntrezIDs.txt",header=F,sep="\t"); names(cacng_genes) <- c("gene","entrezID")
+cacng_gene_positions <- findCacngs(cacng_genes, expression);
 cacng_genes <- cbind(cacng_genes, cacng_gene_positions)
 
-100700027
-
-expressionLiver <- read.table("~/CarolinGWAS/inputs/CichlidX_TPM_GeneExpressionMatrix_VE.txt"); 
-matchingExpressionLiver <- match(y3$species_abb,colnames(expressionLiver))[-which(is.na(match(y3$species_abb,colnames(expressionLiver))))]
-matchingExpressionLiverHi <- match(hiSpecies,colnames(expressionLiver))[-which(is.na(match(hiSpecies,colnames(expressionLiver))))]
-matchingExpressionLiverLo <- match(loSpecies,colnames(expressionLiver))[-which(is.na(match(loSpecies,colnames(expressionLiver))))]
-expressionLiverHi <- expressionLiver[, matchingExpressionLiverHi]; expressionLiverLo <- expressionLiver[, matchingExpressionLiverLo]
-expressionLiver <- expressionLiver[, matchingExpressionLiver]
-expressionOvary <- read.table("~/CarolinGWAS/inputs/CichlidX_TPM_GeneExpressionMatrix_OV.txt"); 
-matchingExpressionOvary <- match(y3$species_abb,colnames(expressionOvary))[-which(is.na(match(y3$species_abb,colnames(expressionOvary))))]
-matchingExpressionOvaryHi <- match(hiSpecies,colnames(expressionOvary))[-which(is.na(match(hiSpecies,colnames(expressionOvary))))]
-matchingExpressionOvaryLo <- match(loSpecies,colnames(expressionOvary))[-which(is.na(match(loSpecies,colnames(expressionOvary))))]
-expressionOvaryHi <- expressionOvary[, matchingExpressionOvaryHi]; expressionOvaryLo <- expressionOvary[, matchingExpressionOvaryLo]
-expressionOvary <- expressionOvary[,matchingExpression]
-expressionTestis <- read.table("~/CarolinGWAS/inputs/CichlidX_TPM_GeneExpressionMatrix_TE.txt"); 
-matchingExpressionTestis <- match(y3$species_abb,colnames(expressionTestis))[-which(is.na(match(y3$species_abb,colnames(expressionTestis))))]
-matchingExpressionTestisHi <- match(hiSpecies,colnames(expressionTestis))[-which(is.na(match(hiSpecies,colnames(expressionTestis))))]
-matchingExpressionTestisLo <- match(loSpecies,colnames(expressionTestis))[-which(is.na(match(loSpecies,colnames(expressionTestis))))]
-expressionTestisHi <- expressionTestis[, matchingExpressionTestisHi]; expressionTestisLo <- expressionTestis[, matchingExpressionTestisLo]
-expressionTestis <- expressionTestis[,matchingExpression]
-expressionGills <- read.table("~/CarolinGWAS/inputs/CichlidX_TPM_GeneExpressionMatrix_GI.txt"); 
-matchingExpressionGills <- match(y3$species_abb,colnames(expressionGills))[-which(is.na(match(y3$species_abb,colnames(expressionGills))))]
-matchingExpressionGillsHi <- match(hiSpecies,colnames(expressionGills))[-which(is.na(match(hiSpecies,colnames(expressionGills))))]
-matchingExpressionGillsLo <- match(loSpecies,colnames(expressionGills))[-which(is.na(match(loSpecies,colnames(expressionGills))))]
-expressionGillsHi <- expressionGills[, matchingExpressionGillsHi]; expressionGillsLo <- expressionGills[, matchingExpressionGillsLo]
-expressionGills <- expressionGills[,matchingExpression]
-expressionLPJ <- read.table("~/CarolinGWAS/inputs/CichlidX_TPM_GeneExpressionMatrix_LP.txt"); 
-matchingExpressionLPJ <- match(y3$species_abb,colnames(expressionLPJ))[-which(is.na(match(y3$species_abb,colnames(expressionLPJ))))]
-matchingExpressionLPJHi <- match(hiSpecies,colnames(expressionLPJ))[-which(is.na(match(hiSpecies,colnames(expressionLPJ))))]
-matchingExpressionLPJLo <- match(loSpecies,colnames(expressionLPJ))[-which(is.na(match(loSpecies,colnames(expressionLPJ))))]
-expressionLPJHi <- expressionLPJ[, matchingExpressionLPJHi]; expressionLPJLo <- expressionLPJ[, matchingExpressionLPJLo]
-expressionLPJ <- expressionLPJ[, matchingExpressionLPJ]
-
-
-expLogAndMeans <- function(exp) {
-	expLog <- log2(exp +1)
-	expression_means <- apply(expLog,1,mean)
-	return(expression_means)
-}
-
-expression_means <- expLogAndMeans(brainExpression); expression_meansHi <- expLogAndMeans(expressionBrainHi); expression_meansLo <- expLogAndMeans(expressionBrainLo)
-expressionLiver_means <- expLogAndMeans(expressionLiver); expressionLiver_meansHi <- expLogAndMeans(expressionLiverHi); expressionLiver_meansLo <- expLogAndMeans(expressionLiverLo)
-expressionOvary_means <- expLogAndMeans(expressionOvary); expressionOvary_meansHi <- expLogAndMeans(expressionOvaryHi); expressionOvary_meansLo <- expLogAndMeans(expressionOvaryLo)
-expressionTestis_means <- expLogAndMeans(expressionTestis); expressionTestis_meansHi <- expLogAndMeans(expressionTestisHi); expressionTestis_meansLo <- expLogAndMeans(expressionTestisLo)
-expressionGills_means <- expLogAndMeans(expressionGills); expressionGills_meansHi <- expLogAndMeans(expressionGillsHi); expressionGills_meansLo <- expLogAndMeans(expressionGillsLo)
-expressionLPJ_means <- expLogAndMeans(expressionLPJ); expressionLPJ_meansHi <- expLogAndMeans(expressionLPJHi); expressionLPJ_meansLo <- expLogAndMeans(expressionLPJLo)
-
-
-
-pdf("~/CarolinGWAS/plots/expression_cacng.pdf",height=12,width=8)
+# Fig. S11
+tissues <- c("brain","liver","ovary","testis","gills","LPJs")
 par(mfrow=c(3,2))
-barplot(expression_means[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[1],ylab="log2 expression (TMP)",ylim=c(0,7))
-barplot(expressionLiver_means[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[2],ylim=c(0,7))
-barplot(expressionOvary_means[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[3],ylab="log2 expression (TMP)",ylim=c(0,7))
-barplot(expressionTestis_means[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[4],ylim=c(0,7))
-barplot(expressionGills_means[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[5],ylab="log2 expression (TMP)",ylim=c(0,7))
-barplot(expressionLPJ_means[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[6],ylim=c(0,7))
-dev.off()
+barplot(meanExpressionValsBrain$mean[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[1],ylab="log2 expression (TMP)",ylim=c(0,7))
+barplot(meanExpressionValsLiver$mean[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[2],ylim=c(0,7))
+barplot(meanExpressionValsOvary$mean[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[3],ylab="log2 expression (TMP)",ylim=c(0,7))
+barplot(meanExpressionValsTestis$mean[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[4],ylim=c(0,7))
+barplot(meanExpressionValsGills$mean[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[5],ylab="log2 expression (TMP)",ylim=c(0,7))
+barplot(meanExpressionValsLPJ$mean[cacng_gene_positions],names= cacng_genes$gene,las=2,main= tissues[6],ylim=c(0,7))
 
 
-pdf("~/CarolinGWAS/plots/expression_cacng_behaviour_species_sameScale_hiLoComparison.pdf",height=12,width=8)
+# Also separated by high / low exploratory behavior (not very informative; not in the paper)
 par(mfrow=c(3,2))
-barplot(t(cbind(expression_meansHi[cacng_gene_positions],expression_meansLo[cacng_gene_positions])),beside=TRUE, names= cacng_genes$gene,las=2,main= tissues[1],ylab="log2 expression (TMP)",ylim=c(0,7))
-barplot(t(cbind(expressionLiver_meansHi[cacng_gene_positions],expressionLiver_meansLo[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[2],ylim=c(0,7))
-legend("topright",c("high exploration species","low exploration species"),col=c("grey10","grey70"),pch=15,cex=1.5)
-barplot(t(cbind(expressionOvary_meansHi[cacng_gene_positions],expressionOvary_meansLo[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[3],ylab="log2 expression (TMP)",ylim=c(0,7))
-barplot(t(cbind(expressionTestis_meansHi[cacng_gene_positions],expressionTestis_meansLo[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[4],ylim=c(0,7))
-barplot(t(cbind(expressionGills_meansHi[cacng_gene_positions],expressionGills_meansLo[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[5],ylab="log2 expression (TMP)",ylim=c(0,7))
-barplot(t(cbind(expressionLPJ_meansHi[cacng_gene_positions],expressionLPJ_meansLo[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[6],ylim=c(0,7))
-dev.off()
-
-pdf("~/CarolinGWAS/plots/expression_cacng_behaviour_species_sameScale_cacngSNPcomparison.pdf",height=12,width=8)
-par(mfrow=c(3,2))
-barplot(t(cbind(expression_meansHi[cacng_gene_positions],expression_meansLo[cacng_gene_positions])),beside=TRUE, names= cacng_genes$gene,las=2,main= tissues[1],ylab="log2 expression (TMP)",ylim=c(0,7))
-barplot(t(cbind(expressionLiver_meansHi[cacng_gene_positions],expressionLiver_meansLo[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[2],ylim=c(0,7))
-legend("topright",c("cacng5b SNP 0/0","cacng5b SNP 1/1"),col=c("grey10","grey70"),pch=15,cex=1.5)
-barplot(t(cbind(expressionOvary_meansHi[cacng_gene_positions],expressionOvary_meansLo[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[3],ylab="log2 expression (TMP)",ylim=c(0,7))
-barplot(t(cbind(expressionTestis_meansHi[cacng_gene_positions],expressionTestis_meansLo[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[4],ylim=c(0,7))
-barplot(t(cbind(expressionGills_meansHi[cacng_gene_positions],expressionGills_meansLo[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[5],ylab="log2 expression (TMP)",ylim=c(0,7))
-barplot(t(cbind(expressionLPJ_meansHi[cacng_gene_positions],expressionLPJ_meansLo[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[6],ylim=c(0,7))
-dev.off()
-
-
-
-
-
-barplot(expression_meansHi[cacng_gene_positions])
+barplot(t(cbind(meanExpressionValsBrain$meanGroup1[cacng_gene_positions],meanExpressionValsBrain$meanGroup2[cacng_gene_positions])),beside=TRUE, names= cacng_genes$gene,las=2,main= tissues[1],ylab="log2 expression (TMP)",ylim=c(0,7))
+barplot(t(cbind(meanExpressionValsLiver$meanGroup1[cacng_gene_positions],meanExpressionValsLiver$meanGroup2[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[2],ylim=c(0,7))
+legend("topright",c("high exploration species","low exploration species"),col=c("grey10","grey70"),pch=15,cex=1.0)
+barplot(t(cbind(meanExpressionValsOvary$meanGroup1[cacng_gene_positions],meanExpressionValsOvary$meanGroup2[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[3],ylab="log2 expression (TMP)",ylim=c(0,7))
+barplot(t(cbind(meanExpressionValsTestis$meanGroup1[cacng_gene_positions],meanExpressionValsTestis$meanGroup2[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[4],ylim=c(0,7))
+barplot(t(cbind(meanExpressionValsGills$meanGroup1[cacng_gene_positions],meanExpressionValsGills$meanGroup2[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[5],ylab="log2 expression (TMP)",ylim=c(0,7))
+barplot(t(cbind(meanExpressionValsLPJ$meanGroup1[cacng_gene_positions],meanExpressionValsLPJ$meanGroup2[cacng_gene_positions])),beside=TRUE,names= cacng_genes$gene,las=2,main= tissues[6],ylim=c(0,7))

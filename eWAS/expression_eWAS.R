@@ -29,7 +29,6 @@ expressionLPJ <- read.table("CichlidX_TPM_GeneExpressionMatrix_LP.txt.gz")
 
 # the behaviour measurement
 y <- read.table("../TestingForAssociation/exploratoryBehaviorMedians.txt",header=T)
-y2 <- y[-1,]; y3 <- y2[order(y2$species_abb),]
 # The phylogenetic tree
 tanTree <- read.tree("../TestingForAssociation/TanganyikaSpeciesTree_b1.tre"); 
 # Mapping between entrez gene IDs and GO terms 
@@ -49,25 +48,6 @@ LPJExpressionOrderedLog2 <- prepareExpressionData(expressionLPJ, y)
 matchingPheno <- match(colnames(expression),y$species_abb)[-which(is.na(match(colnames(expression),y$species_abb)))]
 phenoForExpression <- y[matchingPheno,]
 
-
-
-
-hiSpecies <- y3$species_abb[which(y3$median_exploration > quantile(y3$median_exploration,0.50))]
-loSpecies <- y3$species_abb[which(y3$median_exploration <= quantile(y3$median_exploration,0.50))]
-
-# separating species according to the cacng5b SNP
-SNP_species_info <- read.table("~/CarolinGWAS/pointOfBeauty_LG4_1472288.txt",header=TRUE)
-cacng5bHiSpecies <- SNP_species_info$taxa[which(SNP_species_info$gen_highest == -1)]
-cacng5bLoSpecies <- SNP_species_info$taxa[which(SNP_species_info$gen_highest == 1)]
-# this can be used as a switch to either use exploration mesurements or the gacng5b genotype for separation of species for the cacng barplots in part3
-hiSpecies <- cacng5bHiSpecies; loSpecies <- cacng5bLoSpecies
-
-
-# all genes that are near (+/-5kb) GWAS-significant (red-area) SNPs
-allSigGenes <- scan("~/CarolinGWAS/inputs/GWAS_allAssociatedGenes5kb_PGLSplusLM.txt",what=character())
-
-# entrezIDs of cacng genes:
-cacng_genes <- read.table("~/CarolinGWAS/cacngEntrezIDs.txt",header=F,sep="\t"); names(cacng_genes) <- c("gene","entrezID")
 
 ##########################################################################################
 ######   looking for association of brain gene expression and exploratory behavior 
