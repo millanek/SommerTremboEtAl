@@ -2,14 +2,10 @@
 
 ## Goals 
 
-* Preprocessing the gene expression data
+* Compare the accuracy of continuous Neural Network-based predictions of exploratory tendency against real empirical measurements
 
-* Association of gene expression with exploratory behavior
-
-* Gene Ontology analysis of genes whose expression in the adult brain is associated with exploratory behavior
-
-* Comparing association of behavior to gene expression with association of behavior to genotypes (Fig. 2B)
+* Comparing simple binary predictions based on the top SNP against real empirical measurements
 
 ## Usage
 
-All the analyses are documented in R script `expression_eWAS.R`. 
+All the analyses are documented in R script `EvaluatePredictions.R`. 
