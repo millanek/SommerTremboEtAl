@@ -12,3 +12,5 @@ Sommer-Trembo C, Santos MA, Clark B, Werner M, Fages A, Matschiner M, Hornung S,
 * [Association with Gene Expression](eWAS/)<br>Testing for association between exploratory behavior and gene expression
 
 * [Exploring cacng genes](cacngExploration/)<br>Looking at expression of cacng5b and other cacng genes 
+
+* [Evaluating predictions](evaluatingPredictions/)<br>Evaluating the accuracy of behavioral predictions
