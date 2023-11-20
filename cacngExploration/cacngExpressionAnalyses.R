@@ -7,7 +7,8 @@
 ##  load data and get it into shape       ######################################
 ################################################################################
 
-setwd("~/CarolinGWAS/SommerTremboEtAl/cacngExploration/") 
+# Change the path to point to the directory containing this file
+setwd("~/SommerTremboEtAl/cacngExploration/") 
 
 # Load expression data:
 expression <- read.table("../eWAS/CichlidX_TPM_GeneExpressionMatrix_BR.txt.gz")

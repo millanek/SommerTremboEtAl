@@ -7,7 +7,8 @@
 ##  input data        				      ######################################
 ################################################################################
 
-setwd("~/CarolinGWAS/SommerTremboEtAl/evaluatingPredictions/") 
+# Change the path to point to the directory containing this file
+setwd("~/SommerTremboEtAl/evaluatingPredictions/") 
 
 y <- read.table("../TestingForAssociation/exploratoryBehaviorMedians.txt",header=T)
 predictions <- c(0.105, 0.162, 0.195, 0.125, 0.101, 0.095, 0.366, 0.378)

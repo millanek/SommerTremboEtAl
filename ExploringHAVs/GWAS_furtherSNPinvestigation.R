@@ -1,19 +1,20 @@
 
 ########################################################################
 ### Script by Milan Malinsky and Carolin Sommer-Trembo
-### Last edit: 22nd June 2021
+### Last edit: 20th November 2023
 ### This script is for more detailed investigation of results of GWAS which were produced on the compute cluster by GWASrun.R + PGLSrun.R 
-### This follows after GWAS_plotAndProcess.R
 ### 
 
 ########################################################################
 #######   Load packages  	      ######################################
 ########################################################################
 
+# Change the path to point to the directory containing this file
+setwd("~/SommerTremboEtAl/ExploringHAVs")
+
 library("biomaRt"); ensembl=useMart("ensembl",dataset="oniloticus_gene_ensembl")
 library("topGO"); library("GenomicRanges"); 
 # and our functions that are needed below:
-setwd("~/CarolinGWAS/SommerTremboEtAl/ExploringHAVs")
 source("GWAS_functions.R")
 
 
