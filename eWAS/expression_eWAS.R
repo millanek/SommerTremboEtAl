@@ -1,19 +1,21 @@
 ########################################################################
 ### Script by Milan Malinsky and Carolin Sommer-Trembo
-### Last edit: 27th May 2021
+### Last edit: 20th Nov 2023
 ### Analyses about association of (log2-transformed) gene expression with the behaviour median values
 
 ########################################################################
 #######   Load packages  ######################################
 ########################################################################
 
+
+# Change the path to point to the directory containing this file
+setwd("~/SommerTremboEtAl/eWAS/") 
+
 # This is for the pgls approach
 library("caper")
 library("topGO"); 
 # and our functions that are needed below:
 source("../ExploringHAVs/GWAS_functions.R")
-
-setwd("~/CarolinGWAS/SommerTremboEtAl/eWAS/") 
 
 ################################################################################
 ##  load data and get it into shape       ######################################
