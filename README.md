@@ -7,6 +7,8 @@ Sommer-Trembo C, Santos MA, Clark B, Werner M, Fages A, Matschiner M, Hornung S,
 
 * [Testing for association](TestingForAssociation/)<br>Testing for association between exploratory behavior and genetic variants
 
+* [Simulations](simulations/) <br> Using simulations to control for incomplete lineage sorting and gene flow
+
 * [Exploring HAVs](ExploringHAVs/)<br>Selection and exploration of Highly Associated Variants (HAVs)
 
 * [Association with Gene Expression](eWAS/)<br>Testing for association between exploratory behavior and gene expression
