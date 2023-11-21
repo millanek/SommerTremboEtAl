@@ -13,7 +13,7 @@
 ## Details
 
 The Tanganyika phylogeny and gene flow estimates come from: <br> 
-Ronco, F. et al. Drivers and dynamics of a massive adaptive radiation in cichlid fishes. Nature 589, 76–81 (2021).
+Ronco, F. et al. (2021) Drivers and dynamics of a massive adaptive radiation in cichlid fishes. Nature 589, 76–81. doi: [https://doi.org/10.1038/s41586-020-2930-4](https://doi.org/10.1038/s41586-020-2930-4)
 
 As in Ronco et al. (2021), we use 20 randomly subsampled gene-flow matrices (see that paper's supplement for details). 
 
